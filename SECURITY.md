@@ -10,13 +10,13 @@ Il est donc important de maintenir votre instance à jour. C'est le cas pour l'i
 
 ## Signaler une vulnérabilité
 
-Merci de signaler toute vulnérabilité via [GitHub Issues](https://github.com/Luckyluka17/Wezzer/issues), avec le label **security-vulnerability**. 
+Merci de signaler toute vulnérabilité via [GitHub Issues](https://github.com/Albatros329/Wezzer/issues), avec le label **security-vulnerability**. 
 
-**S'il s'agit d'une vulnérabilité critique, veuillez la signaler via cette adresse mail : [`support@wezzer.tech`](mailto:support@wezzer.tech)**. Nous essayerons de vous répondre dans les plus brefs délais.
+**S'il s'agit d'une vulnérabilité critique, veuillez la signaler via cette adresse mail : [`dev@albatros.ovh`](mailto:dev@albatros.ovh)**. Nous essayerons de vous répondre dans les plus brefs délais.
 
 ## IMPORTANT: Instance non-officielles & dépots mirroirs
 
 Si vous hébergez une instance de Wezzer, nous vous recommandons de la mettre à jour régulièrement, mais surtout de privilégier Docker pour héberger l'application. Cela améliorera la sécurité de votre instance.
 
 > [!CAUTION]
-> Nous ne sommes pas responsables des dépôts qui réutilisent notre code. Assurez-vous que les dépôts que vous choisissez utilisent la dernière version. Ce dépôt (**[Luckyluka17/Wezzer](https://github.com/Luckyluka17/Wezzer/)**) est officiel et recevra donc les derniers patchs de sécurité.
+> Nous ne sommes pas responsables des dépôts qui réutilisent notre code. Assurez-vous que les dépôts que vous choisissez utilisent la dernière version. Ce dépôt (**[Albatros329/Wezzer](https://github.com/Albatros329/Wezzer/)**) est officiel et recevra donc les derniers patchs de sécurité.
