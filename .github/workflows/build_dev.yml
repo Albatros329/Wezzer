@@ -23,7 +23,7 @@ jobs:
         run: docker build -t wezzer .
 
       - name: Tag Docker Image
-        run: docker tag wezzer luckyluka17/wezzer:latest
+        run: docker tag wezzer albatros329/wezzer:latest
 
       - name: Push Docker Image
-        run: docker push luckyluka17/wezzer:latest
+        run: docker push albatros329/wezzer:latest
