@@ -263,6 +263,7 @@ ion-icon {
 
     #detail-daily {
         height: 140px !important;
+        overflow: hidden;
     }
 
     #loader img {
@@ -361,6 +362,7 @@ ion-icon {
 
 #detail-daily {
     height: 130px;
+    overflow: hidden;
 }
 
 .weather-per-hour-container {
