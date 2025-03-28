@@ -4,20 +4,20 @@
 
 # Wezzer 
 
-![GitHub Release](https://img.shields.io/github/v/release/Luckyluka17/Wezzer?logo=github&label=github)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Luckyluka17/Wezzer/build_dev.yml?logo=docker&label=build)
-![Docker Image Version](https://img.shields.io/docker/v/luckyluka17/wezzer?logo=docker&label=docker)
-![Docker Pulls](https://img.shields.io/docker/pulls/luckyluka17/wezzer?logo=docker)
-![GitHub Repo stars](https://img.shields.io/github/stars/Luckyluka17/Wezzer?style=flat&color=yellow&logo=github)
-[![](https://img.shields.io/badge/Soutenir%20le%20projet-grey?logo=buymeacoffee)](https://buymeacoffee.com/Luckyluka17)
-[![](https://img.shields.io/badge/Documentation-white?logo=materialformkdocs)](https://luckyluka17.github.io/Wezzer)
+![GitHub Release](https://img.shields.io/github/v/release/Albatros329/Wezzer?logo=github&label=github)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Albatros329/Wezzer/build_dev.yml?logo=docker&label=build)
+![Docker Image Version](https://img.shields.io/docker/v/Albatros329/wezzer?logo=docker&label=docker)
+![Docker Pulls](https://img.shields.io/docker/pulls/Albatros329/wezzer?logo=docker)
+![GitHub Repo stars](https://img.shields.io/github/stars/Albatros329/Wezzer?style=flat&color=yellow&logo=github)
+[![](https://img.shields.io/badge/Soutenir%20le%20projet-grey?logo=buymeacoffee)](https://buymeacoffee.com/Albatros329)
+[![](https://img.shields.io/badge/Documentation-white?logo=materialformkdocs)](https://Albatros329.github.io/Wezzer)
 
 
 </div>
 
 Wezzer est une application web utilisant l'API de [open-meteo](https://open-meteo.com/) pour vous fournir la météo en temps réel ainsi que les prévisions. Cette application est conçue pour être utilisée sur les ordinateurs et les téléphones, offrant une expérience utilisateur fluide et intuitive.
 
-Pour bien débuter, nous vous recommandons de lire la [documentation](https://luckyluka17.github.io/Wezzer/).
+Pour bien débuter, nous vous recommandons de lire la [documentation](https://Albatros329.github.io/Wezzer/).
 
 ### [Site de démonstration](https://wezzer.tech)
 
@@ -38,7 +38,7 @@ __*__: Sur Firefox, Wezzer peut présenter dans certains cas des problèmes d'af
 - **📣 Sans publicité ni traqueur** : Wezzer est un projet à but non lucratif dont l'objectif est de fournir un accès simple et sans perturbation à la météo. Vous pouvez néanmoins soutenir le développement en faisant un don du montant de votre choix.
 - **🎨 Personnalisable** : Pour rendre votre instance unique, vous avez la possibilité de la personnaliser en modifiant les templates HTML et les fichiers CSS, par exemple.
 
-[**_➔_** Découvrez toutes les fonctionnalitées disponibles sur cette page](https://luckyluka17.github.io/Wezzer/#fonctionnalitees)
+[**_➔_** Découvrez toutes les fonctionnalitées disponibles sur cette page](https://Albatros329.github.io/Wezzer/#fonctionnalitees)
 
 ## Aperçus
 
@@ -56,19 +56,19 @@ __*__: Sur Firefox, Wezzer peut présenter dans certains cas des problèmes d'af
 ### Via Docker (recommandé)
 
 ```
-docker pull luckyluka17/wezzer
+docker pull Albatros329/wezzer
 ```
 
 ```
-docker run -p 8080:8080 luckyluka17/wezzer
+docker run -p 8080:8080 Albatros329/wezzer
 ```
 
-Votre application devrait être disponible sur l'adresse [localhost:8080](http://localhost:8080). Pour plus de détails, veuillez lire [la documentation](https://luckyluka17.github.io/Wezzer/install/#installation-et-utilisation).
+Votre application devrait être disponible sur l'adresse [localhost:8080](http://localhost:8080). Pour plus de détails, veuillez lire [la documentation](https://Albatros329.github.io/Wezzer/install/#installation-et-utilisation).
 
 ### Autres méthodes
 
 > [!IMPORTANT]  
-> Le guide d'installation complet a été déplacé sur [cette page](https://luckyluka17.github.io/Wezzer/install/#installation-et-utilisation) dans notre documentation.
+> Le guide d'installation complet a été déplacé sur [cette page](https://Albatros329.github.io/Wezzer/install/#installation-et-utilisation) dans notre documentation.
 
 ## Licence
 
