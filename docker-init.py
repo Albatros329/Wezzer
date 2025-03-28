@@ -8,7 +8,6 @@ init(autoreset=True)
 workdir = "/data"
 default_settings = {
     "api": "api.open-meteo.com",
-    "rss": "https://raw.githubusercontent.com/Luckyluka17/Wezzer/refs/heads/main/feed.xml",
     # Proxy (https://docs.proxyscrape.com/)
     "use_proxies": True,
     "proxy_country_code": "all",

@@ -3,7 +3,6 @@ import io
 import json
 import os
 
-import feedparser
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -43,8 +42,6 @@ def api_link(location_cookie):
 def index():
     location_cookie = request.cookies.get("loc")
 
-    # Charger le flux RSS
-    notifications = feedparser.parse(config_file["rss"])
 
     if location_cookie == None:
         return redirect("/welcome")
@@ -158,7 +155,6 @@ def index():
             raw_past=data_past,
             raw_air=data_air,
             past_total=past_total,
-            notifications=notifications.entries,
             moon_phase=moonphase,
         )
     )
