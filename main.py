@@ -40,6 +40,7 @@ def api_link(location_cookie):
 
 @app.route("/")
 def index():
+
     location_cookie = request.cookies.get("loc")
 
 
@@ -166,6 +167,9 @@ def index():
 
 @app.route("/welcome")
 def welcome():
+    """
+    Page d'accueil.
+    """
 
     if request.cookies.get("loc") != None:
         return redirect("/")
@@ -178,6 +182,9 @@ def welcome():
 
 @app.route("/graph")
 def basic_graph():
+    """
+    Générer un graphique par rapport à une donnée précise.
+    """
                         
     plt.switch_backend('Agg')
 
@@ -234,5 +241,7 @@ def not_found(error):
 def error(error):
     return render_template("error.html", error_code=500), 500
 
+
+# Initialisation de l'application
 def init():
     return app
