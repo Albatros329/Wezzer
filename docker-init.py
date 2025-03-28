@@ -5,7 +5,9 @@ import json
 
 init(autoreset=True)
 
-workdir = "/data"
+workdir = "/data" 
+
+# Paramètres par défaut
 default_settings = {
     "api": "api.open-meteo.com",
     # Proxy (https://docs.proxyscrape.com/)
