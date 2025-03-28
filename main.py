@@ -95,35 +95,57 @@ def index():
             data_basic["hourly"]["direct_radiation"][i] = int(round(data_basic["hourly"]["direct_radiation"][i], 0))
 
 
-        # Obtenir les phases lunaire
+        # Obtenir les phases lunaire et les stocker en local pour améliorer la vitesse de chargement
         moonphase = []
-        for i in range(0, 8):
-            day_timestamp = int((datetime.now() + timedelta(days=i)).timestamp())
+
+        with open(f"/data/moon.json", "r", encoding="utf-8") as f:
+            moonDB = json.loads(f.read())
+            f.close()
+
+        if moonDB == []:
+            for i in range(0, 8):
+                day_timestamp = int((datetime.now() + timedelta(days=i)).timestamp())
+
+                moon_api = fetch_data(f"https://api.farmsense.net/v1/moonphases/?d={day_timestamp}", config_file)[0]
+                
+                moonphase.append(["Nouvelle lune", "🌑"] if moon_api["Phase"] == "New Moon" else ["Premier croissant", "🌒"] if moon_api["Phase"] == "Waxing Crescent" else ["Premier quartier", "🌓"] if moon_api["Phase"] == "1st Quarter" else ["Lune gibbeuse croissante", "🌔"] if moon_api["Phase"] == "Waxing Gibbous" else ["Pleine lune", "🌕"] if moon_api["Phase"] == "Full Moon" else ["Lune gibbeuse décroissante", "🌖"] if moon_api["Phase"] == "Waning Gibbous" else ["Dernier quartier", "🌗"] if moon_api["Phase"] == "3rd Quarter" else ["Dernier croissant", "🌘"] if moon_api["Phase"] == "Waning Crescent" else ["Dernier croissant", "🌑"])
+
+
+                moonphase[i].append(round(moon_api["Age"], 1))
+                moonphase[i].append(moon_api["Illumination"]*100)
+                moonphase[i].append(datetime.fromtimestamp(day_timestamp).strftime("%d/%m/%Y"))
+
+
+                with open(f"/data/moon.json", "w", encoding="utf-8") as f:
+                    json.dump(moonphase, f, indent=4)
+                    f.close()     
+        elif moonDB[0][4] != datetime.now().strftime("%d/%m/%Y"):
+            moonDB.pop(0)
+
+            # Automatiquement calculer le dernier jour
+            day_timestamp = int((datetime.now() + timedelta(days=6)).timestamp())
 
             moon_api = fetch_data(f"https://api.farmsense.net/v1/moonphases/?d={day_timestamp}", config_file)[0]
             
-            if moon_api["Phase"] == "New Moon":
-                moonphase.append(["Nouvelle lune", "🌑"])
-            elif moon_api["Phase"] == "Waxing Crescent":
-                moonphase.append(["Premier croissant", "🌒"])
-            elif moon_api["Phase"] == "1st Quarter":
-                moonphase.append(["Premier quartier", "🌓"])
-            elif moon_api["Phase"] == "Waxing Gibbous":
-                moonphase.append(["Lune gibbeuse croissante", "🌔"])
-            elif moon_api["Phase"] == "Full Moon":
-                moonphase.append(["Pleine lune", "🌕"])
-            elif moon_api["Phase"] == "Waning Gibbous":
-                moonphase.append(["Lune gibbeuse décroissante", "🌖"])
-            elif moon_api["Phase"] == "3rd Quarter":
-                moonphase.append(["Dernier quartier", "🌗"])
-            elif moon_api["Phase"] == "Waning Crescent":
-                moonphase.append(["Dernier croissant", "🌘"])
-            elif moon_api["Phase"] == "Dark Moon":
-                moonphase.append(["Dernier croissant", "🌑"])
+            moonDB.append(["Nouvelle lune", "🌑"] if moon_api["Phase"] == "New Moon" else ["Premier croissant", "🌒"] if moon_api["Phase"] == "Waxing Crescent" else ["Premier quartier", "🌓"] if moon_api["Phase"] == "1st Quarter" else ["Lune gibbeuse croissante", "🌔"] if moon_api["Phase"] == "Waxing Gibbous" else ["Pleine lune", "🌕"] if moon_api["Phase"] == "Full Moon" else ["Lune gibbeuse décroissante", "🌖"] if moon_api["Phase"] == "Waning Gibbous" else ["Dernier quartier", "🌗"] if moon_api["Phase"] == "3rd Quarter" else ["Dernier croissant", "🌘"] if moon_api["Phase"] == "Waning Crescent" else ["Dernier croissant", "🌑"])
 
-            moonphase[i].append(round(moon_api["Age"], 1))
-            moonphase[i].append(moon_api["Illumination"]*100)
-            moonphase[i].append(datetime.fromtimestamp(day_timestamp).strftime("%d/%m/%Y"))
+            moonDB[6].append(round(moon_api["Age"], 1))
+            moonDB[6].append(moon_api["Illumination"]*100)
+            moonDB[6].append(datetime.fromtimestamp(day_timestamp).strftime("%d/%m/%Y"))
+
+            moonphase = moonDB
+
+            with open(f"/data/moon.json", "w", encoding="utf-8") as f:
+                json.dump(moonDB, f, indent=4)
+                f.close()
+        else:
+            moonphase = moonDB
+
+
+            
+
+
+
 
     response = make_response(
         render_template(
