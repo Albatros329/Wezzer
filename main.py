@@ -127,8 +127,8 @@ def index():
             
             moonDB.append(["Nouvelle lune", "🌑"] if moon_api["Phase"] == "New Moon" else ["Premier croissant", "🌒"] if moon_api["Phase"] == "Waxing Crescent" else ["Premier quartier", "🌓"] if moon_api["Phase"] == "1st Quarter" else ["Lune gibbeuse croissante", "🌔"] if moon_api["Phase"] == "Waxing Gibbous" else ["Pleine lune", "🌕"] if moon_api["Phase"] == "Full Moon" else ["Lune gibbeuse décroissante", "🌖"] if moon_api["Phase"] == "Waning Gibbous" else ["Dernier quartier", "🌗"] if moon_api["Phase"] == "3rd Quarter" else ["Dernier croissant", "🌘"] if moon_api["Phase"] == "Waning Crescent" else ["Dernier croissant", "🌑"])
 
-            moonDB[6].append(round(moon_api["Age"], 1))
-            moonDB[6].append(moon_api["Illumination"]*100)
+            moonDB[6].append(round(moon_api["Age"], 0))
+            moonDB[6].append(round(moon_api["Illumination"]*100, 0))
             moonDB[6].append(datetime.fromtimestamp(day_timestamp).strftime("%d/%m/%Y"))
 
             moonphase = moonDB
