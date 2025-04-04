@@ -110,7 +110,7 @@ def index():
 
 
                 moonphase[i].append(round(moon_api["Age"], 1))
-                moonphase[i].append(moon_api["Illumination"]*100)
+                moonphase[i].append(round(moon_api["Illumination"]*100, 2))
                 moonphase[i].append(datetime.fromtimestamp(day_timestamp).strftime("%d/%m/%Y"))
 
 
@@ -156,7 +156,7 @@ def index():
             raw_past=data_past,
             raw_air=data_air,
             past_total=past_total,
-            moon_phase=moonphase,
+            moon_phase=moonphase[0:6],
         )
     )
     
