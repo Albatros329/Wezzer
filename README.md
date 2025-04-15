@@ -6,8 +6,9 @@
 
 ![GitHub Release](https://img.shields.io/github/v/release/Albatros329/Wezzer?logo=github&label=github)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Albatros329/Wezzer/build_dev.yml?logo=docker&label=build)
-![Docker Image Version](https://img.shields.io/docker/v/Albatros329/wezzer?logo=docker&label=docker)
-![Docker Pulls](https://img.shields.io/docker/pulls/Albatros329/wezzer?logo=docker)
+![Docker Image Version](https://img.shields.io/docker/v/albatros329/wezzer?logo=docker&label=docker)
+![Docker Pulls](https://img.shields.io/docker/pulls/albatros329/wezzer?logo=docker&label=pulls)
+![Docker Pulls](https://img.shields.io/docker/pulls/luckyluka17/wezzer?logo=docker&label=pulls+(archive))
 ![GitHub Repo stars](https://img.shields.io/github/stars/Albatros329/Wezzer?style=flat&color=yellow&logo=github)
 [![](https://img.shields.io/badge/Soutenir%20le%20projet-grey?logo=buymeacoffee)](https://buymeacoffee.com/Albatros329)
 [![](https://img.shields.io/badge/Documentation-white?logo=materialformkdocs)](https://Albatros329.github.io/Wezzer)
