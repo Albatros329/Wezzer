@@ -12,7 +12,7 @@ Il est donc important de maintenir votre instance à jour. C'est le cas pour l'i
 
 Merci de signaler toute vulnérabilité via [GitHub Issues](https://github.com/Albatros329/Wezzer/issues), avec le label **security-vulnerability**. 
 
-**S'il s'agit d'une vulnérabilité critique, veuillez la signaler via cette adresse mail : [`dev@albatros.ovh`](mailto:dev@albatros.ovh)**. Nous essayerons de vous répondre dans les plus brefs délais.
+<!-- **S'il s'agit d'une vulnérabilité critique, veuillez la signaler via cette adresse mail : [`dev@albatros.ovh`](mailto:dev@albatros.ovh)**. Nous essayerons de vous répondre dans les plus brefs délais. -->
 
 ## IMPORTANT: Instance non-officielles & dépots mirroirs
 
