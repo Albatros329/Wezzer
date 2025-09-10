@@ -151,7 +151,7 @@ def index():
             date=date,
             raw=data_basic,
             time=time,
-            loc=json.loads(request.cookies.get("loc")),
+            loc=json.loads(request.cookies.get("loc")), # type: ignore
             config_file=config_file,
             raw_past=data_past,
             raw_air=data_air,
