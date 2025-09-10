@@ -20,7 +20,7 @@ Wezzer est une application web utilisant l'API de [open-meteo](https://open-mete
 
 Pour bien débuter, nous vous recommandons de lire la [documentation](https://Albatros329.github.io/Wezzer/).
 
-### [Site de démonstration](https://wezzer.tech)
+### [Site de démonstration](https://wezzer.albatros.ovh)
 
 ### Compatiblité des navigateurs
 | Navigateur         | Statut           |
