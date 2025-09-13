@@ -498,27 +498,31 @@
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {% for element in moon_phase %}
-                    {% if moon_phase | get_index(element) == 0 %}
-                        <div style="display: flex; align-items: center;">
-                            <h1 id="moonphase-emoji">{{ element[1] }}</h1>
-                            <div id="moonphase-now-informations">
-                            <h1>{{ element[0] }}</h1>
-                            <p>Aujourd'hui • Âge : {{ element[2] }} j • Illumination : {{ element[3] }} %</p>
+                {% if moon_phase != None %}
+                    {% for element in moon_phase %}
+                        {% if moon_phase | get_index(element) == 0 %}
+                            <div style="display: flex; align-items: center;">
+                                <h1 id="moonphase-emoji">{{ element[1] }}</h1>
+                                <div id="moonphase-now-informations">
+                                <h1>{{ element[0] }}</h1>
+                                <p>Aujourd'hui • Âge : {{ element[2] }} j • Illumination : {{ element[3] }} %</p>
+                                </div>
                             </div>
-                        </div>
-                        <hr>
-                        <h4><ion-icon name="calendar"></ion-icon> Phases pour les jours à venir :</h4>
-                    {% else %}
-                        <div style="display: flex; align-items: center;">
-                            <h1 style="font-size: 50px;">{{ element[1] }}</h1>
-                            <div id="moonphase-now-informations">
-                            <h1 style="font-size: 20px;">{{ element[0] }}</h1>
-                            <p style="font-size: 16px;">{{ element[4] }} • Illumination : {{ element[3] }} %</p>
+                            <hr>
+                            <h4><ion-icon name="calendar"></ion-icon> Phases pour les jours à venir :</h4>
+                        {% else %}
+                            <div style="display: flex; align-items: center;">
+                                <h1 style="font-size: 50px;">{{ element[1] }}</h1>
+                                <div id="moonphase-now-informations">
+                                <h1 style="font-size: 20px;">{{ element[0] }}</h1>
+                                <p style="font-size: 16px;">{{ element[4] }} • Illumination : {{ element[3] }} %</p>
+                                </div>
                             </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <p>😓 Erreur lors de la récupération des phases lunaires.</p>
+                {% endif %}
             </div>
           </div>
         </div>
